@@ -45,7 +45,7 @@ var config = {
 };
 
 window.onload = function() {
-    fetch('./api/data.json')
+    fetch('./data.json')
     .then(response => {
         if (!response.ok) {
             throw new Error("HTTP error " + response.status);

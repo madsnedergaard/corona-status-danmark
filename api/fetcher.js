@@ -23,7 +23,7 @@ module.exports = async (event, context) => {
     date: date
   };
 
-  let rawdata = fs.readFileSync(path.join(__dirname, 'data.json'));
+  let rawdata = fs.readFileSync(path.join(__dirname, '../data.json'));
   let currentData = JSON.parse(rawdata);
   console.log(currentData);
 
@@ -40,5 +40,5 @@ module.exports = async (event, context) => {
   };
 
   const json = JSON.stringify(newData, null, 4);
-  fs.writeFileSync(path.join(__dirname, 'data.json'), json);
+  fs.writeFileSync(path.join(__dirname, '../data.json'), json);
 };
