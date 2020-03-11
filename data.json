@@ -4,52 +4,60 @@
   "data": [
     {
       "amount": 1,
-      "date": "27. februar 2020"
+      "date": "27. februar"
     },
     {
       "amount": 2,
-      "date": "28. februar 2020"
+      "date": "28. februar"
     },
     {
       "amount": 3,
-      "date": "29. februar 2020"
+      "date": "29. februar"
     },
     {
       "amount": 4,
-      "date": "1. marts 2020"
+      "date": "1. marts"
     },
     {
       "amount": 4,
-      "date": "2. marts 2020"
+      "date": "2. marts"
     },
     {
       "amount": 10,
-      "date": "3. marts 2020"
+      "date": "3. marts"
     },
     {
       "amount": 15,
-      "date": "4. marts 2020"
+      "date": "4. marts"
     },
     {
       "amount": 20,
-      "date": "5. marts 2020"
+      "date": "5. marts"
     },
     {
       "amount": 20,
-      "date": "6. marts 2020"
+      "date": "6. marts"
     },
     {
       "amount": 20,
-      "date": "7. marts 2020"
+      "date": "7. marts"
     },
     {
       "amount": 23,
-      "date": "8. marts 2020"
+      "date": "8. marts"
     },
 
     {
       "amount": 59,
-      "date": "9. marts 2020"
+      "date": "9. marts"
+    },
+    {
+      "amount": 262,
+      "date": "10. marts"
+    },
+    {
+      "amount": 442,
+      "date": "11. marts"
     }
   ]
 }

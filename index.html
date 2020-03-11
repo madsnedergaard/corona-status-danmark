@@ -44,15 +44,50 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="App Title">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js" integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.8.22/locale/da.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.8.22/plugin/customParseFormat.js"></script>
+    <script src="app.js"></script>
+
     <style>
+        html {
+            height: 100%;
+        }
         body {
+            margin: 0;
             font-family: sans-serif;
+            text-align: center;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .chart {
+            width:75%;
+            margin:0 auto;
+            max-height: 80%;
+        }
+        .footer {
+            display: flex;
+            flex: 1;
+            align-items: flex-end;
+            justify-content: center;
+            font-size: .85em;
+        }
+        a, a:visited {
+            color: rgb(255, 99, 132);
         }
         </style>
 </head>
 <body>
-<h1>Corona Virus Status i Danmark</h1>
-<h2>Se nuværende udvikling + forventet udvikling</h2>
-
+<h1>Følg udviklingen af Corona Virus (COVID-19) i Danmark</h1>
+<p><small>Data bliver hentet hvert 15. minut fra <a href="https://stps.dk">Styrelsen for Patientsikkerhed</a></small></p>
+<div class="chart"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+		<canvas id="canvas" style="display: block; height: 354px; width: 709px;" width="1418" height="708" class="chartjs-render-monitor"></canvas>
+</div>
+<div class="footer">
+<p>Senest opdateret: <span id="lastupdate"></span></p>
+</div>
 </body>
 </html>

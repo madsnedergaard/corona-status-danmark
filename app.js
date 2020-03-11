@@ -58,7 +58,7 @@ window.onload = function() {
         var values = response.data.map(d => d.amount);
         config.data.labels = labels;
         config.data.datasets[0].data = values;
-
+        document.getElementById('lastupdate').innerText = response.lastUpdate;
         var ctx = document.getElementById('canvas').getContext('2d');
         window.myLine = new Chart(ctx, config);
     })
