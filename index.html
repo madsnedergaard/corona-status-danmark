@@ -78,13 +78,18 @@
         a, a:visited {
             color: rgb(255, 99, 132);
         }
+        #canvas {
+            display: block; 
+            height: 554px; 
+            width: 709px;
+        }
         </style>
 </head>
 <body>
 <h1>Følg udviklingen af Corona Virus (COVID-19) i Danmark</h1>
 <p><small>Data bliver hentet hvert 15. minut fra <a href="https://stps.dk">Styrelsen for Patientsikkerhed</a></small></p>
-<div class="chart"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
-		<canvas id="canvas" style="display: block; height: 354px; width: 709px;" width="1418" height="708" class="chartjs-render-monitor"></canvas>
+<div class="chart">
+    <canvas id="canvas"  class="chartjs-render-monitor"></canvas>
 </div>
 <div class="footer">
 <p>Senest opdateret: <span id="lastupdate"></span></p>

@@ -25,6 +25,7 @@ var config = {
     },
     options: {
         responsive: true,
+        maintainAspectRatio: false,
         tooltips: {
             mode: 'index',
             intersect: false,
