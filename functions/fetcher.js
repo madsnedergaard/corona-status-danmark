@@ -1,7 +1,7 @@
 require("isomorphic-fetch");
 const cheerio = require("cheerio");
 const fs = require("fs");
-const currentData = require("../data.json");
+const currentData = require("data.json");
 
 const ENDPOINT = "https://stps.dk/";
 
