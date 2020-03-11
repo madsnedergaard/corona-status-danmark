@@ -5,7 +5,7 @@ const fs = require('fs');
 
 const ENDPOINT = "https://stps.dk/";
 
-exports.handler = async (event, context) => {
+module.exports = async (event, context) => {
   const res = await fetch(ENDPOINT);
   const response = await res.text();
 
