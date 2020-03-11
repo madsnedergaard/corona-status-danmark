@@ -1,62 +1,62 @@
 {
-  "lastUpdate": "11. marts 2020 kl. 17:00",
-  "lastCheck": "11. marts 2020 kl. 19:00",
-  "data": [
-    {
-      "amount": 1,
-      "date": "27. februar"
-    },
-    {
-      "amount": 2,
-      "date": "28. februar"
-    },
-    {
-      "amount": 3,
-      "date": "29. februar"
-    },
-    {
-      "amount": 4,
-      "date": "1. marts"
-    },
-    {
-      "amount": 4,
-      "date": "2. marts"
-    },
-    {
-      "amount": 10,
-      "date": "3. marts"
-    },
-    {
-      "amount": 15,
-      "date": "4. marts"
-    },
-    {
-      "amount": 20,
-      "date": "5. marts"
-    },
-    {
-      "amount": 23,
-      "date": "6. marts"
-    },
-    {
-      "amount": 27,
-      "date": "7. marts"
-    },
-    {
-      "amount": 35,
-      "date": "8. marts"
-    },
-    {
-      "amount": 90,
-      "date": "9. marts"
-    },
-    {
-      "amount": 262,
-      "date": "10. marts"
-    },
-    {
-      "amount": 442,
-      "date": "11. marts"
-    }
-  ]
+    "lastUpdate": "11. marts 2020, kl. 22:15",
+    "lastCheck": "Wed Mar 11 2020 22:44:54 GMT+0100 (Central European Standard Time)",
+    "data": [
+        {
+            "amount": 1,
+            "date": "27. februar"
+        },
+        {
+            "amount": 2,
+            "date": "28. februar"
+        },
+        {
+            "amount": 3,
+            "date": "29. februar"
+        },
+        {
+            "amount": 4,
+            "date": "1. marts"
+        },
+        {
+            "amount": 4,
+            "date": "2. marts"
+        },
+        {
+            "amount": 10,
+            "date": "3. marts"
+        },
+        {
+            "amount": 15,
+            "date": "4. marts"
+        },
+        {
+            "amount": 20,
+            "date": "5. marts"
+        },
+        {
+            "amount": 23,
+            "date": "6. marts"
+        },
+        {
+            "amount": 27,
+            "date": "7. marts"
+        },
+        {
+            "amount": 35,
+            "date": "8. marts"
+        },
+        {
+            "amount": 90,
+            "date": "9. marts"
+        },
+        {
+            "amount": 262,
+            "date": "10. marts"
+        },
+        {
+            "amount": 514,
+            "date": "11. marts"
+        }
+    ]
 }
