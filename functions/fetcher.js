@@ -1,7 +1,7 @@
 require("isomorphic-fetch");
+const path = require('path');
 const cheerio = require("cheerio");
-const fs = require("fs");
-const currentData = require("./data.json");
+const fs = require('fs');
 
 const ENDPOINT = "https://stps.dk/";
 
@@ -23,6 +23,10 @@ exports.handler = async (event, context) => {
     date: date
   };
 
+  let rawdata = fs.readFileSync(path.join(__dirname, 'data.json'));
+  let currentData = JSON.parse(rawdata);
+  console.log(currentData);
+
   const index = currentData.data.findIndex(e => e.date === date);
   if (index === -1) {
     currentData.data.push(newEntry);
@@ -36,5 +40,5 @@ exports.handler = async (event, context) => {
   };
 
   const json = JSON.stringify(newData, null, 4);
-  fs.writeFileSync("../data.json", json);
+  fs.writeFileSync(path.join(__dirname, 'data.json'), json);
 };
