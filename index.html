@@ -91,7 +91,7 @@
                 display: block;
             }
             h1 {
-                font-size: 1.5em;
+                font-size: 1.14em;
             }
             #canvas {
             display: block; 
@@ -104,12 +104,13 @@
 </head>
 <body>
 <h1>Følg udviklingen af Corona Virus (COVID-19) i Danmark</h1>
-<p><small>Data bliver hentet hvert 15. minut fra <a href="https://stps.dk">Styrelsen for Patientsikkerhed</a></small></p>
 <div class="chart">
     <canvas id="canvas"  class="chartjs-render-monitor"></canvas>
 </div>
 <div class="footer">
-<p>Senest opdateret: <span id="lastupdate"></span></p>
+    <p class="subline"><small>Data bliver hentet hvert 15. minut fra <a href="https://stps.dk">Styrelsen for Patientsikkerhed</a></small>
+    <small>&nbsp;&mdash;&nbsp;</small>
+    <small> Senest opdateret: <span id="lastupdate"></span></small></p>
 </div>
 </body>
 </html>
