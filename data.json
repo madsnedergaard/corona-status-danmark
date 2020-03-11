@@ -1,0 +1,55 @@
+{
+  "lastUpdate": "11. marts 2020 kl. 17:00",
+  "lastCheck": "11. marts 2020 kl. 19:00",
+  "data": [
+    {
+      "amount": 1,
+      "date": "27. februar 2020"
+    },
+    {
+      "amount": 2,
+      "date": "28. februar 2020"
+    },
+    {
+      "amount": 3,
+      "date": "29. februar 2020"
+    },
+    {
+      "amount": 4,
+      "date": "1. marts 2020"
+    },
+    {
+      "amount": 4,
+      "date": "2. marts 2020"
+    },
+    {
+      "amount": 10,
+      "date": "3. marts 2020"
+    },
+    {
+      "amount": 15,
+      "date": "4. marts 2020"
+    },
+    {
+      "amount": 20,
+      "date": "5. marts 2020"
+    },
+    {
+      "amount": 20,
+      "date": "6. marts 2020"
+    },
+    {
+      "amount": 20,
+      "date": "7. marts 2020"
+    },
+    {
+      "amount": 23,
+      "date": "8. marts 2020"
+    },
+
+    {
+      "amount": 59,
+      "date": "9. marts 2020"
+    }
+  ]
+}
