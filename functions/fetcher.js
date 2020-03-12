@@ -10,7 +10,10 @@ exports.handler = async (event, context) => {
   return client
     .query(q.Get(q.Ref(q.Collection("data"), "259772325350605312")))
     .then(response => {
-      return response.data;
+      return response.json();
+    })
+    .then(json => {
+      return json.data;
     })
     .catch(error => {
       console.log("error", error);
