@@ -36,7 +36,7 @@ async function saveData(data) {
 
 }
 
-func = async (event, context) => {
+exports.handler = async (event, context) => {
   const res = await fetch(ENDPOINT);
   const response = await res.text();
 
@@ -73,5 +73,3 @@ func = async (event, context) => {
   //const json = JSON.stringify(newData, null, 4);
   //fs.writeFileSync(path.join(__dirname, '../data.json'), json);
 };
-
-module.exports  = func;
