@@ -4,7 +4,7 @@ const cheerio = require("cheerio");
 const fs = require('fs');
 const faunadb = require('faunadb');
 
-const ENDPOINT = "https://stps.dk/";
+const ENDPOINT = "https://www.sst.dk/da/Viden/Smitsomme-sygdomme/Smitsomme-sygdomme-A-AA/Coronavirus/Spoergsmaal-og-svar";
 
 /* configure faunaDB Client with our secret */
 const q = faunadb.query
@@ -41,14 +41,21 @@ exports.handler = async (event, context) => {
   const response = await res.text();
 
   let $ = cheerio.load(response);
-  const text = $(".link-box-link.color-creme.align-center").text();
-  const amount = text
-    .split("personer:")[1]
-    .trim()
-    .split("\n")[0];
-  const fullDate = text.split("Opdateret")[1].trim();
-  const date = text.split("Opdateret")[1].split('2020')[0].trim();
+  let rowIndex = null;
+  // Find the correct column
+  $('table tbody tr:first-of-type td').each((i, elem) => {
+      if ($(elem).text().trim() === 'Smittede personer') {
+        rowIndex = i;
+      }
+  });
 
+  const amount = $("table tbody tr:first-of-type").next().find('td').eq(rowIndex).text();
+
+  // find date - currently it appears below the table
+  const rawDate = $('table').parent().nextAll('p:contains("Opdateret")').text();
+  const fullDate = rawDate.split("Opdateret")[1].trim();
+  const date = rawDate.split("Opdateret")[1].split(',')[0].trim();
+  
   const newEntry = {
     amount: parseInt(amount, 10),
     date: date
