@@ -13,7 +13,10 @@ exports.handler = async (event, context) => {
       return response.json();
     })
     .then(json => {
-      return json.data;
+      return {
+        statusCode: 200,
+        body: json.data
+      };
     })
     .catch(error => {
       console.log("error", error);
