@@ -5,18 +5,18 @@ const client = new faunadb.Client({
   secret: process.env.FAUNADB_SECRET
 });
 
-exports.handler = async (event, context) => {
+exports.handler =  function(event, context, callback) {
   console.log("Getting data");
-  return client
+  client
     .query(q.Get(q.Ref(q.Collection("data"), "259772325350605312")))
     .then(response => {
       return response.json();
     })
     .then(json => {
-      return {
+      callback(null, {
         statusCode: 200,
         body: json.data
-      };
+      });
     })
     .catch(error => {
       console.log("error", error);
