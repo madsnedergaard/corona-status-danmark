@@ -36,7 +36,7 @@ async function saveData(data) {
 
 }
 
-exports.handler = async (event, context) => {
+exports.handler = async (event, context, callback) => {
   const res = await fetch(ENDPOINT);
   const response = await res.text();
 
@@ -76,4 +76,9 @@ exports.handler = async (event, context) => {
 
   console.log(newData)
   const saved = await saveData(newData)
+  
+  callback(null, {
+    statusCode: 200,
+    body: "ok"
+    });
 };
