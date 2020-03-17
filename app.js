@@ -17,6 +17,13 @@ var config = {
     datasets: [
       {
         label: "Antal smittede",
+        backgroundColor: chartColors.yellow,
+        borderColor: chartColors.yellow,
+        data: [],
+        fill: false
+      },
+      {
+        label: "Antal indlagte",
         backgroundColor: chartColors.red,
         borderColor: chartColors.red,
         data: [],
@@ -34,9 +41,9 @@ var config = {
     legend: {
       display: true,
       position: "bottom",
-      labels: {
+      /*labels: {
         fontColor: "rgb(255, 99, 132)"
-      }
+      }*/
     },
     hover: {
       mode: "nearest",
@@ -55,9 +62,11 @@ fetch('./data.json')
 
 function buildChart(response) {
     var labels = response.data.map(d => d.date);
-    var values = response.data.map(d => d.amount);
+    var smittede = response.data.map(d => d.amount);
+    var hospitalised = response.data.map(d => d.hospitalised);
     config.data.labels = labels;
-    config.data.datasets[0].data = values;
+    config.data.datasets[0].data = smittede;
+    config.data.datasets[1].data = hospitalised;
     document.getElementById("lastupdate").innerText = response.lastUpdate;
     var ctx = document.getElementById("canvas").getContext("2d");
     window.myLine = new Chart(ctx, config);
