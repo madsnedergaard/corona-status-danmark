@@ -100,7 +100,7 @@ const getInfected = async () => {
 }
 
 
-const handler = async (event, context, callback) => {
+exports.handler = async (event, context, callback) => {
 
   const hospitalised = await getHospitalised();
   const infected = await getInfected();
@@ -133,6 +133,3 @@ const handler = async (event, context, callback) => {
     });
 };
 
-handler();
-
-module.exports = handler;
