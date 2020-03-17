@@ -35,7 +35,7 @@ var config = {
     responsive: true,
     maintainAspectRatio: false,
     tooltips: {
-      mode: "index",
+      mode: "nearest",
       intersect: false
     },
     legend: {
@@ -47,7 +47,7 @@ var config = {
     },
     hover: {
       mode: "nearest",
-      intersect: true
+      intersect: false
     }
   }
 };
