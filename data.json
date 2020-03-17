@@ -1,62 +1,26 @@
 {
-    "lastUpdate": "11. marts 2020, kl. 22:15",
-    "lastCheck": "Wed Mar 11 2020 23:18:23 GMT+0100 (Central European Standard Time)",
-    "data": [
-        {
-            "amount": 1,
-            "date": "27. februar"
-        },
-        {
-            "amount": 2,
-            "date": "28. februar"
-        },
-        {
-            "amount": 3,
-            "date": "29. februar"
-        },
-        {
-            "amount": 4,
-            "date": "1. marts"
-        },
-        {
-            "amount": 4,
-            "date": "2. marts"
-        },
-        {
-            "amount": 10,
-            "date": "3. marts"
-        },
-        {
-            "amount": 15,
-            "date": "4. marts"
-        },
-        {
-            "amount": 20,
-            "date": "5. marts"
-        },
-        {
-            "amount": 23,
-            "date": "6. marts"
-        },
-        {
-            "amount": 27,
-            "date": "7. marts"
-        },
-        {
-            "amount": 35,
-            "date": "8. marts"
-        },
-        {
-            "amount": 90,
-            "date": "9. marts"
-        },
-        {
-            "amount": 262,
-            "date": "10. marts"
-        },
-        {
-            "amount": 514,
-            "date": "11. marts"
-        }
-    ]
+  "lastUpdate": "17. marts, 17:00",
+  "lastCheck": "Tue Mar 17 2020 20:14:00 GMT+0000 (Coordinated Universal Time)",
+  "data": [
+    { "amount": 1, "date": "27. februar" },
+    { "amount": 2, "date": "28. februar" },
+    { "amount": 3, "date": "29. februar" },
+    { "amount": 4, "date": "1. marts" },
+    { "amount": 4, "date": "2. marts" },
+    { "amount": 10, "date": "3. marts" },
+    { "amount": 15, "date": "4. marts" },
+    { "amount": 20, "date": "5. marts" },
+    { "amount": 23, "date": "6. marts" },
+    { "amount": 27, "date": "7. marts" },
+    { "amount": 35, "date": "8. marts" },
+    { "hospitalised": 6, "amount": 90, "date": "9. marts" },
+    { "hospitalised": 7,"amount": 262, "date": "10. marts" },
+    { "hospitalised": 10,"amount": 514, "date": "11. marts" },
+    { "hospitalised": 10,"amount": 674, "date": "12. marts" },
+    { "hospitalised": 23, "amount": 801, "date": "13. marts" },
+    { "hospitalised": 23, "amount": 827, "date": "14. marts" },
+    { "hospitalised":28, "amount": 864, "date": "15. marts" },
+    { "hospitalised": 62, "amount": 914, "date": "16. marts" },
+    { "hospitalised": 82, "amount": 977, "date": "17. marts" }
+  ]
 }
