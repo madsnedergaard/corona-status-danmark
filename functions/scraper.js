@@ -112,7 +112,7 @@ exports.handler = async (event, context, callback) => {
   };
 
   const currentData = await getData();
-  const index = currentData.data.findIndex(e => e.date === date);
+  const index = currentData.data.findIndex(e => e.date === infected.date);
   if (index === -1) {
     currentData.data.push(newEntry);
   } else {
