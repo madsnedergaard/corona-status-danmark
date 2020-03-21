@@ -144,7 +144,7 @@ const getInfected = async $ => {
   };
 };
 
-const handler = async (event, context, callback) => {
+exports.handler = async (event, context, callback) => {
   const res = await fetch(ENDPOINT);
   const response = await res.text();
   let $ = cheerio.load(response);
@@ -180,5 +180,3 @@ const handler = async (event, context, callback) => {
     body: "ok"
   });
 };
-
-handler();
