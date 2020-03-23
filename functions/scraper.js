@@ -46,7 +46,7 @@ const getHospitalised = async $ => {
   // Find the correct column
   const table = $(
     'h2:contains("Antal patienter indlagt med bekræftet COVID-19")'
-  ).next("table");
+  ).next(".table-responsive");
   $("tbody tr:first-of-type td", table).each((i, elem) => {
     if (
       $(elem)
