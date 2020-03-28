@@ -46,7 +46,7 @@ const getHospitalised = async $ => {
   // Find the correct column
   const table = $(
     'h2:contains("Antal patienter indlagt med bekræftet COVID-19")'
-  ).next(".table-responsive");
+  ).nextAll(".table-responsive").first();
   $("tbody tr:first-of-type td", table).each((i, elem) => {
     if (
       $(elem)
@@ -76,14 +76,14 @@ const getHospitalised = async $ => {
 
   // find date - currently it appears below the table
   const rawDate = $(table)
-    .next('p:contains("Udgivet")')
+    .next('p:contains("Opdateret")')
     .text();
   const fullDate = rawDate
-    .split("Udgivet")[1]
+    .split("Opdateret")[1]
     .split("\n")[0]
     .trim();
   const date = rawDate
-    .split("Udgivet")[1]
+    .split("Opdateret")[1]
     .split("kl")[0]
     .trim();
 
@@ -180,3 +180,13 @@ exports.handler = async (event, context, callback) => {
     body: "ok"
   });
 };
+
+// const test = async () => {
+//   const res = await fetch(ENDPOINT);
+//   const response = await res.text();
+//   let $ = cheerio.load(response);
+
+//   const hospitalised = await getHospitalised($);
+//   console.log(hospitalised)
+// }
+// test();
