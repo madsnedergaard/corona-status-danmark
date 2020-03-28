@@ -46,7 +46,9 @@ const getHospitalised = async $ => {
   // Find the correct column
   const table = $(
     'h2:contains("Antal patienter indlagt med bekræftet COVID-19")'
-  ).nextAll(".table-responsive").first();
+  )
+    .nextAll(".table-responsive")
+    .first();
   $("tbody tr:first-of-type td", table).each((i, elem) => {
     if (
       $(elem)
@@ -106,7 +108,7 @@ const getInfected = async $ => {
     if (
       $(elem)
         .text()
-        .trim() === "Smittede personer"
+        .includes("Smittede personer")
     ) {
       colIndex = i;
     }
@@ -181,12 +183,13 @@ exports.handler = async (event, context, callback) => {
   });
 };
 
-// const test = async () => {
-//   const res = await fetch(ENDPOINT);
-//   const response = await res.text();
-//   let $ = cheerio.load(response);
+const test = async () => {
+  const res = await fetch(ENDPOINT);
+  const response = await res.text();
+  let $ = cheerio.load(response);
 
-//   const hospitalised = await getHospitalised($);
-//   console.log(hospitalised)
-// }
+  const result = await getInfected($);
+  //const result = await getHospitalised($);
+  console.log(result);
+};
 // test();
