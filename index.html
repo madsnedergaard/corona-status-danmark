@@ -1,99 +1,135 @@
 <!DOCTYPE html>
 <html lang="da">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
     <!-- Descriptions -->
     <title>Coronavirus udvikling i Danmark</title>
-    <meta name="description" content="Følg udviklingen over tid i Danmark">
+    <meta name="description" content="Følg udviklingen over tid i Danmark" />
     <!--<meta name="author" content="">-->
 
-    <meta property="fb:app_id" content="123456789">
-    <meta property="og:url" content="https://corona-virus-danmark.netlify.com">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Coronavirus i DK">
-    <meta property="og:image" content="https://corona-virus-danmark.netlify.com/share.png">
-    <meta property="og:description" content="Følg udviklingen over tid i Danmark">
-    <meta property="og:site_name" content="corona-virus-danmark">
-    <meta property="og:locale" content="da_DK">
-    <meta property="article:author" content="">
+    <meta property="fb:app_id" content="123456789" />
+    <meta
+      property="og:url"
+      content="https://corona-virus-danmark.netlify.com"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Coronavirus i DK" />
+    <meta
+      property="og:image"
+      content="https://corona-virus-danmark.netlify.com/share.png"
+    />
+    <meta
+      property="og:description"
+      content="Følg udviklingen over tid i Danmark"
+    />
+    <meta property="og:site_name" content="corona-virus-danmark" />
+    <meta property="og:locale" content="da_DK" />
+    <meta property="article:author" content="" />
 
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:creator" content="@mads_nedergaard">
-    <meta name="twitter:url" content="https://corona-virus-danmark.netlify.com">
-    <meta name="twitter:title" content="Coronavirus i DK">
-    <meta name="twitter:description" content="Følg udviklingen over tid i Danmark">
-    <meta name="twitter:image" content="https://corona-virus-danmark.netlify.com/share.png">
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:creator" content="@mads_nedergaard" />
+    <meta
+      name="twitter:url"
+      content="https://corona-virus-danmark.netlify.com"
+    />
+    <meta name="twitter:title" content="Coronavirus i DK" />
+    <meta
+      name="twitter:description"
+      content="Følg udviklingen over tid i Danmark"
+    />
+    <meta
+      name="twitter:image"
+      content="https://corona-virus-danmark.netlify.com/share.png"
+    />
 
     <!-- Web app settings -->
-    <meta name="application-name" content="Coronavirus DK">
-    <meta name="theme-color" content="#000000">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="App Title">
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js" integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI=" crossorigin="anonymous"></script>
+    <meta name="application-name" content="Coronavirus DK" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="App Title" />
+    <!--
+    <script
+      src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"
+      integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI="
+      crossorigin="anonymous"
+    ></script>
     <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.8.22/locale/da.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.8.22/plugin/customParseFormat.js"></script>
     <script src="app.js"></script>
-
+  -->
     <style>
-        html {
-            height: 100%;
-        }
+      html {
+        height: 100%;
+      }
+      body {
+        margin: 0;
+        font-family: sans-serif;
+        text-align: center;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+      .chart {
+        width: 75%;
+        margin: 0 auto;
+        max-height: 80%;
+      }
+      .footer {
+        display: flex;
+        flex: 1;
+        align-items: flex-end;
+        justify-content: center;
+        font-size: 0.85em;
+      }
+      a,
+      a:visited {
+        color: rgb(255, 99, 132);
+      }
+      #canvas {
+        display: block;
+        height: 554px;
+        width: 709px;
+      }
+      @media screen and (max-width: 600px) {
         body {
-            margin: 0;
-            font-family: sans-serif;
-            text-align: center;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-        }
-        .chart {
-            width:75%;
-            margin:0 auto;
-            max-height: 80%;
+          padding: 0.5em;
         }
         .footer {
-            display: flex;
-            flex: 1;
-            align-items: flex-end;
-            justify-content: center;
-            font-size: .85em;
+          display: block;
         }
-        a, a:visited {
-            color: rgb(255, 99, 132);
+        h1 {
+          font-size: 1.14em;
         }
         #canvas {
-            display: block; 
-            height: 554px; 
-            width: 709px;
+          display: block;
+          height: 204px;
+          width: 600px;
         }
-        @media screen and (max-width: 600px) {
-            body {
-                padding: 0.5em;
-            }
-            .footer {
-                display: block;
-            }
-            h1 {
-                font-size: 1.14em;
-            }
-            #canvas {
-            display: block; 
-            height: 204px; 
-            width: 600px;
-        }
-            
-        }
-        </style>
-</head>
-<body>
-<h1>Følg udviklingen af Corona Virus (COVID-19) i Danmark</h1>
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Følg udviklingen af Corona Virus (COVID-19) i Danmark</h1>
+    <h2>Closed 😓</h2>
+    <p>
+      De officielle sider med tal skifter konstant format, og jeg blev træt af
+      at opdatere scraper.
+      <br /><br />
+      <a
+        href="#https://www.sst.dk/da/Viden/Smitsomme-sygdomme/Smitsomme-sygdomme-A-AA/Coronavirus/Spoergsmaal-og-svar/Overvaagningsdata"
+        >Se tal hos sst.dk</a
+      >
+    </p>
+    <!--
 <div class="chart">
     <canvas id="canvas"  class="chartjs-render-monitor"></canvas>
 </div>
@@ -102,5 +138,6 @@
     <small>&nbsp;&mdash;&nbsp;</small>
     <small> Senest opdateret: <span id="lastupdate"></span></small></p>
 </div>
-</body>
+-->
+  </body>
 </html>
